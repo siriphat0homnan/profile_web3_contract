@@ -1,0 +1,759 @@
+{
+	"id": "95045c9179aef3e2d387e14663cf97ad",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Profile.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\n\r\ncontract Profile {\r\nstruct Funder {\r\n  address addr;\r\n  uint amount;\r\n}\r\n\r\nstruct Campaign {\r\n  address beneficiary;\r\n  uint fundingGoal;\r\n  uint numFunders;\r\n  uint amount;\r\n  mapping (uint => Funder) funders;\r\n}\r\n\r\nuint numCampaigns;\r\nmapping (uint => Campaign) campaigns;\r\n\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/Profile.sol": {
+				"Profile": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/Profile.sol\":62:341  contract Profile {\r... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/Profile.sol\":62:341  contract Profile {\r... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa264697066735822122009ead4f129a9325bc5de17f3a3b07a7525328fa2dfb218babfe3f4dadb5d0afd64736f6c63430008070033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122009ead4f129a9325bc5de17f3a3b07a7525328fa2dfb218babfe3f4dadb5d0afd64736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x3F DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MULMOD 0xEA 0xD4 CALL 0x29 0xA9 ORIGIN JUMPDEST 0xC5 0xDE OR RETURN LOG3 0xB0 PUSH27 0x7525328FA2DFB218BABFE3F4DADB5D0AFD64736F6C634300080700 CALLER ",
+							"sourceMap": "62:279:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea264697066735822122009ead4f129a9325bc5de17f3a3b07a7525328fa2dfb218babfe3f4dadb5d0afd64736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MULMOD 0xEA 0xD4 CALL 0x29 0xA9 ORIGIN JUMPDEST 0xC5 0xDE OR RETURN LOG3 0xB0 PUSH27 0x7525328FA2DFB218BABFE3F4DADB5D0AFD64736F6C634300080700 CALLER ",
+							"sourceMap": "62:279:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "66",
+								"totalCost": "12666"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 62,
+									"end": 341,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a264697066735822122009ead4f129a9325bc5de17f3a3b07a7525328fa2dfb218babfe3f4dadb5d0afd64736f6c63430008070033",
+									".code": [
+										{
+											"begin": 62,
+											"end": 341,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 62,
+											"end": 341,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 62,
+											"end": 341,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 62,
+											"end": 341,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 62,
+											"end": 341,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 62,
+											"end": 341,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Profile.sol\":\"Profile\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Profile.sol\":{\"keccak256\":\"0x5beed0b57a65324627838774fbf2ec99b76f6d9e6d4cf75aac0c981c0aa25f35\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9e9e03169cb5d77ee197825100e04d02dba961de86ecbc7ebf074d0633a897a5\",\"dweb:/ipfs/Qmcrc7vkZEfXCHbeBWvUZGjbwiiJzHVH1Ce3XjTBJjJefc\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 22,
+								"contract": "contracts/Profile.sol:Profile",
+								"label": "numCampaigns",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_uint256"
+							},
+							{
+								"astId": 27,
+								"contract": "contracts/Profile.sol:Profile",
+								"label": "campaigns",
+								"offset": 0,
+								"slot": "1",
+								"type": "t_mapping(t_uint256,t_struct(Campaign)20_storage)"
+							}
+						],
+						"types": {
+							"t_address": {
+								"encoding": "inplace",
+								"label": "address",
+								"numberOfBytes": "20"
+							},
+							"t_mapping(t_uint256,t_struct(Campaign)20_storage)": {
+								"encoding": "mapping",
+								"key": "t_uint256",
+								"label": "mapping(uint256 => struct Profile.Campaign)",
+								"numberOfBytes": "32",
+								"value": "t_struct(Campaign)20_storage"
+							},
+							"t_mapping(t_uint256,t_struct(Funder)6_storage)": {
+								"encoding": "mapping",
+								"key": "t_uint256",
+								"label": "mapping(uint256 => struct Profile.Funder)",
+								"numberOfBytes": "32",
+								"value": "t_struct(Funder)6_storage"
+							},
+							"t_struct(Campaign)20_storage": {
+								"encoding": "inplace",
+								"label": "struct Profile.Campaign",
+								"members": [
+									{
+										"astId": 8,
+										"contract": "contracts/Profile.sol:Profile",
+										"label": "beneficiary",
+										"offset": 0,
+										"slot": "0",
+										"type": "t_address"
+									},
+									{
+										"astId": 10,
+										"contract": "contracts/Profile.sol:Profile",
+										"label": "fundingGoal",
+										"offset": 0,
+										"slot": "1",
+										"type": "t_uint256"
+									},
+									{
+										"astId": 12,
+										"contract": "contracts/Profile.sol:Profile",
+										"label": "numFunders",
+										"offset": 0,
+										"slot": "2",
+										"type": "t_uint256"
+									},
+									{
+										"astId": 14,
+										"contract": "contracts/Profile.sol:Profile",
+										"label": "amount",
+										"offset": 0,
+										"slot": "3",
+										"type": "t_uint256"
+									},
+									{
+										"astId": 19,
+										"contract": "contracts/Profile.sol:Profile",
+										"label": "funders",
+										"offset": 0,
+										"slot": "4",
+										"type": "t_mapping(t_uint256,t_struct(Funder)6_storage)"
+									}
+								],
+								"numberOfBytes": "160"
+							},
+							"t_struct(Funder)6_storage": {
+								"encoding": "inplace",
+								"label": "struct Profile.Funder",
+								"members": [
+									{
+										"astId": 3,
+										"contract": "contracts/Profile.sol:Profile",
+										"label": "addr",
+										"offset": 0,
+										"slot": "0",
+										"type": "t_address"
+									},
+									{
+										"astId": 5,
+										"contract": "contracts/Profile.sol:Profile",
+										"label": "amount",
+										"offset": 0,
+										"slot": "1",
+										"type": "t_uint256"
+									}
+								],
+								"numberOfBytes": "64"
+							},
+							"t_uint256": {
+								"encoding": "inplace",
+								"label": "uint256",
+								"numberOfBytes": "32"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/Profile.sol": {
+				"ast": {
+					"absolutePath": "contracts/Profile.sol",
+					"exportedSymbols": {
+						"Profile": [
+							28
+						]
+					},
+					"id": 29,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 28,
+							"linearizedBaseContracts": [
+								28
+							],
+							"name": "Profile",
+							"nameLocation": "71:7:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "Profile.Funder",
+									"id": 6,
+									"members": [
+										{
+											"constant": false,
+											"id": 3,
+											"mutability": "mutable",
+											"name": "addr",
+											"nameLocation": "109:4:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 6,
+											"src": "101:12:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											},
+											"typeName": {
+												"id": 2,
+												"name": "address",
+												"nodeType": "ElementaryTypeName",
+												"src": "101:7:0",
+												"stateMutability": "nonpayable",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 5,
+											"mutability": "mutable",
+											"name": "amount",
+											"nameLocation": "123:6:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 6,
+											"src": "118:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "118:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "Funder",
+									"nameLocation": "89:6:0",
+									"nodeType": "StructDefinition",
+									"scope": 28,
+									"src": "82:51:0",
+									"visibility": "public"
+								},
+								{
+									"canonicalName": "Profile.Campaign",
+									"id": 20,
+									"members": [
+										{
+											"constant": false,
+											"id": 8,
+											"mutability": "mutable",
+											"name": "beneficiary",
+											"nameLocation": "166:11:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 20,
+											"src": "158:19:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											},
+											"typeName": {
+												"id": 7,
+												"name": "address",
+												"nodeType": "ElementaryTypeName",
+												"src": "158:7:0",
+												"stateMutability": "nonpayable",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 10,
+											"mutability": "mutable",
+											"name": "fundingGoal",
+											"nameLocation": "187:11:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 20,
+											"src": "182:16:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 9,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "182:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 12,
+											"mutability": "mutable",
+											"name": "numFunders",
+											"nameLocation": "208:10:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 20,
+											"src": "203:15:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 11,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "203:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 14,
+											"mutability": "mutable",
+											"name": "amount",
+											"nameLocation": "228:6:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 20,
+											"src": "223:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 13,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "223:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 19,
+											"mutability": "mutable",
+											"name": "funders",
+											"nameLocation": "264:7:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 20,
+											"src": "239:32:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Funder_$6_storage_$",
+												"typeString": "mapping(uint256 => struct Profile.Funder)"
+											},
+											"typeName": {
+												"id": 18,
+												"keyType": {
+													"id": 15,
+													"name": "uint",
+													"nodeType": "ElementaryTypeName",
+													"src": "248:4:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"nodeType": "Mapping",
+												"src": "239:24:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Funder_$6_storage_$",
+													"typeString": "mapping(uint256 => struct Profile.Funder)"
+												},
+												"valueType": {
+													"id": 17,
+													"nodeType": "UserDefinedTypeName",
+													"pathNode": {
+														"id": 16,
+														"name": "Funder",
+														"nodeType": "IdentifierPath",
+														"referencedDeclaration": 6,
+														"src": "256:6:0"
+													},
+													"referencedDeclaration": 6,
+													"src": "256:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_struct$_Funder_$6_storage_ptr",
+														"typeString": "struct Profile.Funder"
+													}
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "Campaign",
+									"nameLocation": "144:8:0",
+									"nodeType": "StructDefinition",
+									"scope": 28,
+									"src": "137:138:0",
+									"visibility": "public"
+								},
+								{
+									"constant": false,
+									"id": 22,
+									"mutability": "mutable",
+									"name": "numCampaigns",
+									"nameLocation": "284:12:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 28,
+									"src": "279:17:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 21,
+										"name": "uint",
+										"nodeType": "ElementaryTypeName",
+										"src": "279:4:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 27,
+									"mutability": "mutable",
+									"name": "campaigns",
+									"nameLocation": "326:9:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 28,
+									"src": "299:36:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$20_storage_$",
+										"typeString": "mapping(uint256 => struct Profile.Campaign)"
+									},
+									"typeName": {
+										"id": 26,
+										"keyType": {
+											"id": 23,
+											"name": "uint",
+											"nodeType": "ElementaryTypeName",
+											"src": "308:4:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											}
+										},
+										"nodeType": "Mapping",
+										"src": "299:26:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Campaign_$20_storage_$",
+											"typeString": "mapping(uint256 => struct Profile.Campaign)"
+										},
+										"valueType": {
+											"id": 25,
+											"nodeType": "UserDefinedTypeName",
+											"pathNode": {
+												"id": 24,
+												"name": "Campaign",
+												"nodeType": "IdentifierPath",
+												"referencedDeclaration": 20,
+												"src": "316:8:0"
+											},
+											"referencedDeclaration": 20,
+											"src": "316:8:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_struct$_Campaign_$20_storage_ptr",
+												"typeString": "struct Profile.Campaign"
+											}
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"scope": 29,
+							"src": "62:279:0",
+							"usedErrors": []
+						}
+					],
+					"src": "33:308:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
